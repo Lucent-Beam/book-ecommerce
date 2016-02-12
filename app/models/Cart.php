@@ -9,7 +9,7 @@ class Cart extends Eloquent {
     return $this->belongsTo('Book','book_id');
 
   }
-  
+
 
 
 }

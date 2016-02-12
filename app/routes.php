@@ -13,3 +13,17 @@
 Route::get('/', ['as' =>'index', 'uses'=> 'BookController@getIndex']);
 Route::post('/user/login',[ 'uses' => 'UserController@postLogin']);
 Route::get('/user/logout',['uses'=> 'UserController@getLogout']);
+
+Route::post('/cart/add',[
+
+  'before' => 'auth.basic',
+  'uses'  => 'CartController@postAddToCart'
+
+]);
+
+Route::get('/cart', [
+    'before' =>'auth.basic',
+    'as' => 'cart',
+    'uses' => 'CartController@getIndex'
+
+]);

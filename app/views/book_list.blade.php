@@ -79,6 +79,14 @@
 
 
     </div>
+    <script type="text/javascript">
+
+    @if(Session::has('error'))
+      alert("{{Session::get('error')}}");
+    @endif 
+
+    </script>
+
 
 
   </body>
